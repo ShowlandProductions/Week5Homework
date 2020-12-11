@@ -79,28 +79,9 @@
         <textarea class="col-md-10 description" name="textarea"></textarea>
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
-
-    <script>
-      $(document).ready(function() {
-        //I'm using Moment to display the time at the top of the page
-        //Information for the date and time on the top of the page. The page needs to update when refreshed
-        var dateTimeDiv = $("<div>")
-        var currentDateTime = moment().format('MMMM Do YYYY')
-        
-        dateTimeDiv.html(currentDateTime);
-        $("#currentDay").append(DateTime);
-      
-      //created local storage setting for scheduler 
-      var toDo = $("description")
-      $("saveBtn").on("click", function(){
-        console.log("saved")
-        localStorage.setItem("To Do", toDo)
-      })
-
-      })
-  
-      </script>
-      
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./script.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
