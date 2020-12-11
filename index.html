@@ -79,66 +79,27 @@
         <textarea class="col-md-10 description" name="textarea"></textarea>
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
-      <div class="row time-block"data-hour=6>
-        <div class="col-md-1 hour">6 PM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=7>
-        <div class="col-md-1 hour">7 PM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=8>
-        <div class="col-md-1 hour">8 PM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=9>
-        <div class="col-md-1 hour">9 PM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=10>
-        <div class="col-md-1 hour">10 PM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=11>
-        <div class="col-md-1 hour">11 PM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=12>
-        <div class="col-md-1 hour">12 AM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=1>
-        <div class="col-md-1 hour">1 AM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=2>
-        <div class="col-md-1 hour">2 AM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=3>
-        <div class="col-md-1 hour">3 AM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=4>
-        <div class="col-md-1 hour">4 AM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
-      <div class="row time-block"data-hour=5>
-        <div class="col-md-1 hour">5 AM</div>
-        <textarea class="col-md-10 description" name="textarea"></textarea>
-        <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
-    </div>
+
+    <script>
+      $(document).ready(function() {
+        //I'm using Moment to display the time at the top of the page
+        //Information for the date and time on the top of the page. The page needs to update when refreshed
+        var dateTimeDiv = $("<div>")
+        var currentDateTime = moment().format('MMMM Do YYYY')
+        
+        dateTimeDiv.html(currentDateTime);
+        $("#currentDay").append(DateTime);
+      
+      //created local storage setting for scheduler 
+      var toDo = $("description")
+      $("saveBtn").on("click", function(){
+        console.log("saved")
+        localStorage.setItem("To Do", toDo)
+      })
+
+      })
+  
+      </script>
       
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
